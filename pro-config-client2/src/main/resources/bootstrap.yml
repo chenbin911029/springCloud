@@ -1,0 +1,28 @@
+server:
+  port: 8088
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: configserver  
+  application:
+    name: config-client
+  rabbitmq:
+    host: 192.168.48.59
+    port: 5672
+    username: it
+    password: its123  
+
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/,http://localhost:8082/eureka/
+      
+      
